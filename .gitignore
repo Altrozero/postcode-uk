@@ -4,3 +4,4 @@ vendor
 .idea
 .vs
 composer.lock
+*.cache

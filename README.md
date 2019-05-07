@@ -36,3 +36,10 @@ Format Postcodes in a consistent way
 $formatted = Postcode::format('Sr51NA'); // SR51NA
 $formatted = Postcode::format('sR5 1NA'); // SR51NA
 ```
+
+Pull a postcode from an address string
+```php
+<?php
+
+$postcode = Postcode::findInString('1 Fake Street, Fake Vil, Fake Country, SR51NA');
+```

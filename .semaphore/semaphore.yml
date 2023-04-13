@@ -15,7 +15,7 @@ blocks:
           commands:
             - checkout
             - source ~/.phpbrew/bashrc
-            - phpbrew switch php-$PHP_VERSION
+            - phpbrew use php-$PHP_VERSION
             - cache restore
             - composer install --no-progress --no-suggest --prefer-dist -o
             - cache store

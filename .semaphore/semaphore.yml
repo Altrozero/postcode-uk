@@ -20,7 +20,7 @@ blocks:
             - cache store php-$PHP_VERSION /home/semaphore/.phpbrew/php/php-$PHP_VERSION
             - phpbrew use php-$PHP_VERSION
             - cache restore
-            - sudo apt-get install composer
+            - sudo apt-get -qq install -y composer
             - composer install --no-progress --no-suggest --prefer-dist -o
             - cache store
             - ./vendor/bin/phpunit test

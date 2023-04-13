@@ -15,9 +15,12 @@ blocks:
           commands:
             - checkout
             - source ~/.phpbrew/bashrc
+            - cache restore php-$PHP_VERSION
             - phpbrew install -j $(nproc) $PHP_VERSION +default
+            - cache store php-$PHP_VERSION /home/semaphore/.phpbrew/php/php-$PHP_VERSION
             - phpbrew use php-$PHP_VERSION
             - cache restore
+            - sudo apt-get install composer
             - composer install --no-progress --no-suggest --prefer-dist -o
             - cache store
             - ./vendor/bin/phpunit test

@@ -1,3 +1,5 @@
+[![codecov](https://codecov.io/gh/maksimovic/postcode-uk/branch/master/graph/badge.svg?token=77DATYD2HN)](https://codecov.io/gh/maksimovic/postcode-uk)
+
 # UK Postcode Helper
 PHP Helper class for dealing with UK postcodes.
 

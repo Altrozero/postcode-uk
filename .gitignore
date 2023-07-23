@@ -5,3 +5,6 @@ vendor
 .vs
 composer.lock
 *.cache
+build
+.DS_Store
+.phpunit.result.cache

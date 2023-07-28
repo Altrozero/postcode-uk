@@ -16,7 +16,7 @@ use PHPUnit\Framework\TestCase;
 
 class PostcodeTest extends TestCase
 {
-    public function inputPostcodesValidator()
+    public static function inputPostcodesValidator()
     {
         return [
             ['NE29 0EG', true],
@@ -39,7 +39,7 @@ class PostcodeTest extends TestCase
         ];
     }
 
-    public function inputPostcodesParts()
+    public static function inputPostcodesParts()
     {
         return [
             ['NE29 0EG', true, 'NE29', '0EG', 'NE', '29', '0', 'EG'],
@@ -51,7 +51,7 @@ class PostcodeTest extends TestCase
         ];
     }
 
-    public function inputFindInString()
+    public static function inputFindInString()
     {
         return [
             ['13, Fake Street, Fake Vill, Fake City, Fake Country, NE29 0EG', 'NE290EG'],

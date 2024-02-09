@@ -15,20 +15,21 @@ Break in to parts
 
 $postcode = new Postcode('SR5 1NA');
 
-$postcode->get();
-$postcode->getOutward();
-$postcode->getInward();
-$postcode->getArea();
-$postcode->getDistrict();
-$postcode->getSector();
-$postcode->getUnit();
+$postcode->get(); // SR51NA
+$postcode->getOutward(); //SR5
+$postcode->getInward(); // 1NA
+$postcode->getArea(); // SR
+$postcode->getDistrict(); // 5
+$postcode->getSector(); // 1
+$postcode->getUnit(); // NA
 ```
 
 Validate a postcode
 ```php
 <?php
 
-$good = Postcode::validate('SR5 1nA');
+$good = Postcode::validate('SR5 1nA'); // true
+$bad = Postcode::validate('SR5 N1A'); // false
 ```
 
 Format Postcodes in a consistent way
